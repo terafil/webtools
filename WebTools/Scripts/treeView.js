@@ -75,6 +75,7 @@
 
     function toggleState(container, leaf)
     {
+        container.className = 'fa fa-spinner fa-spin';
         leaf.collapsed = !leaf.collapsed;
 
         if (!leaf.collapsed)
