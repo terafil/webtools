@@ -4,9 +4,14 @@
     <title></title>
     <link rel="stylesheet" href="Content/font-awesome.min.css" />
     <script src="Scripts/treeView.js"></script>
+    <script src="Scripts/progressBar.js"></script>
     <script src="Scripts/app.js"></script>
  </head>
 <body onload="init();">
     <div id="treeContainer"></div>
+    <div id="progressContainer" style="width:600px; height:15px;"></div>
+    <button onclick="stepButtonClick(progress);">Step</button><button onclick="resetButtonClick(progress);">Reset</button>
+    <div id="progressContainer2" style="width:600px; height:15px;"></div>
+    <button onclick="stepButtonClick(progress2);">Step</button><button onclick="resetButtonClick(progress2);">Reset</button>
 </body>
 </html>

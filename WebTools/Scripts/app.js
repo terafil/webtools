@@ -1,4 +1,6 @@
 ﻿/// <reference path="treeView.js" />
+var progress;
+var progress2;
 function init()
 {
     var leafs = [
@@ -59,4 +61,25 @@ function init()
     }
 
     var view = new treeView(config);
+
+    var progressConfig = {
+        containerId: 'progressContainer',
+        maxSteps: 17
+    };
+
+    progress = new progressBar(progressConfig);
+
+    var progressConfig2 = {
+        containerId: 'progressContainer2',
+        maxSteps: 100
+    };
+
+    progress2 = new progressBar(progressConfig2);
+}
+
+function stepButtonClick(progressBarInstance) {
+    progressBarInstance.step();
+}
+function resetButtonClick(progressBarInstance) {
+    progressBarInstance.reset();
 }
