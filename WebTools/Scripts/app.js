@@ -64,7 +64,10 @@ function init()
 
     var progressConfig = {
         containerId: 'progressContainer',
-        maxSteps: 17
+        maxSteps: 17,
+        backgroundColor: 'white',
+        progressColor: 'lightblue',
+        textColor: 'red'
     };
 
     progress = new progressBar(progressConfig);

@@ -25,6 +25,7 @@ namespace WebTools.Controllers
                     }
                 }
             };
+            System.Threading.Thread.Sleep(1000);
             return Ok(leafs);
         }
     }

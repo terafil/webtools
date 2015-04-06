@@ -8,17 +8,19 @@
         var node = document.getElementById(config.containerId);
 
         node.style.border = '1px solid black';
+        node.style.borderRadius = '25px';
         node.style.position = 'relative';
-        node.style.backgroundColor = 'gray';
+        node.style.backgroundColor = config.backgroundColor ? config.backgroundColor : 'gray';
         node.style.zIndex = '-1';
 
         completedContainer = document.createElement('span');
-        completedContainer.style.backgroundColor = 'green';
+        completedContainer.style.backgroundColor = config.progressColor ? config.progressColor : 'green';
         completedContainer.style.height = '100%';
         completedContainer.style.width = '0%';
         completedContainer.style.display = 'inline-block';
         completedContainer.style.position = 'absolute';
         completedContainer.style.zIndex = '1';
+        completedContainer.style.borderRadius = '25px';
 
         textContainer = document.createElement('span');
         textContainer.style.height = '100%';
@@ -28,7 +30,7 @@
         textContainer.style.textAlign = 'center';
         textContainer.style.verticalAlign = 'middle';
         textContainer.innerText = '0%';
-        textContainer.style.color = 'white';
+        textContainer.style.color = config.textColor ? config.textColor : 'white';
 
         node.appendChild(textContainer);
         node.appendChild(completedContainer);
