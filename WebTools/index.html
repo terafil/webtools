@@ -13,5 +13,10 @@
     <button onclick="stepButtonClick(progress);">Step</button><button onclick="resetButtonClick(progress);">Reset</button>
     <div id="progressContainer2" style="width:600px; height:15px;"></div>
     <button onclick="stepButtonClick(progress2);">Step</button><button onclick="resetButtonClick(progress2);">Reset</button>
+
+    <form action="api/v1/files" method="post" enctype="multipart/form-data">
+        <input type="file" />
+        <button type="submit">Submit</button>
+    </form>
 </body>
 </html>
